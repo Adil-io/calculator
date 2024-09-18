@@ -14,18 +14,19 @@ class CalculatorButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        shape: const CircleBorder(),
-        padding: const EdgeInsets.all(20),
-        backgroundColor: color,
-        iconColor: Colors.white
-      ),
-      child: Text(content,
-        style: const TextStyle(
-          fontSize: 25,
-          color: Colors.white
+    return Expanded(
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          shape: CircleBorder(),
+          padding: EdgeInsets.symmetric(vertical: 25),
+          backgroundColor: color,
+        ),
+        child: Text(content,
+          style: const TextStyle(
+            fontSize: 30,
+            color: Colors.white
+          ),
         ),
       ),
     );
